@@ -1,0 +1,3 @@
+This is my third file created using cloud.
+This needs to be synced with local.
+This call be done by git pull.
