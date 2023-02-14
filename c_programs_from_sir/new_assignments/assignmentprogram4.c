@@ -19,6 +19,7 @@ int main()
 					if(i+j+k+l==n)
 					{
 						count++;
+						printf("\n %d + %d + %d + %d \n",i,j,k,l);
 					}
 				}
 			}
