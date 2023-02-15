@@ -22,7 +22,7 @@ int main()
 				}
 				else
 				{
-					for(k=2;k<=i/2;++k)
+					for(k=2;k<i;k++)
 					{	
 						if(i % k == 0)
 						{
@@ -37,7 +37,7 @@ int main()
 				}
 				else
 				{
-					for(k=2;k<=j/2;++k)
+					for(k=2;k<j;k++)
 					{
 						if(j % k ==0)
 						{
