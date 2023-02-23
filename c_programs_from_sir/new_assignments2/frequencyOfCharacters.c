@@ -6,12 +6,12 @@ void charFrequency(char [], int []);
 int main()
 
 {
-	int alphabets[26]={0,};
+	int alphabets[50]={0,};
 
 	char str1[1024];
 
 	printf("\n\nEnter the string: ");
-	fgets(str1,1024,stdin);
+	scanf("%s",str1);
 
 	charFrequency(str1,alphabets);
 
@@ -22,12 +22,12 @@ int main()
 void charFrequency(char str1[],int alphabets[])
 {
 	int i=0;
-	for(i=0;str1[i]!='\n';i++)
+	for(i=0;str1[i]!='\0';i++)
 	{
 		alphabets[str1[i]-'a']++;
 	}
 	
-	for(i=0;str1[i]!='\n';i++)
+	for(i=0;str1[i]!='\0';i++)
 	{
 		if(alphabets[str1[i]-'a']!=0)
 		{
