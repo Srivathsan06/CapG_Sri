@@ -1,7 +1,10 @@
-#include <stdlib.h>
-#include <string.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 #include<unistd.h>
+
 #define MAX_LINE_LENGTH 1024
+
 struct User
 {
     char msisdn[20];
@@ -14,6 +17,7 @@ struct User
     char thirdparmsisdn[10];
     char thirdparmmc[10];
 };
+
 int main() {
     FILE *fp;
     char line[MAX_LINE_LENGTH];
@@ -31,8 +35,8 @@ int main() {
     while (fgets(line, MAX_LINE_LENGTH, fp) != NULL) 
 	{
 		printf("\n%s\n",line);
-		sleep(1);
-		count++;
+		sleep(0.3);
+/*		count++;
         token = strtok(line, "|");
         strcpy(user.msisdn, token);
         token = strtok(NULL, "|");
@@ -52,6 +56,6 @@ int main() {
         token = strtok(NULL, "|");
         strcpy(user.thirdparmmc, token);
         printf("\nUser %d details:",count);
-        printf("\nMSISDN: %s \nOP BRAND NAME: %s \nOP MMC/MNC: %s\nCALL TYPE: %s \nDURATION: %s\nDOWNLOAD: %s\nUPLOAD: %s\nTHIRD PARTY MSISDN: %s\nTHIRD PARTY OPERATOR MMC/MNC: %s\n", user.msisdn, user.opbrandname, user.opmmc, user.caltype, user.dur, user.down, user.upload, user.thirdparmsisdn, user.thirdparmmc);
-
+        printf("\nMSISDN: %s \nOP BRAND NAME: %s \nOP MMC/MNC: %s\nCALL TYPE: %s \nDURATION: %s\nDOWNLOAD: %s\nUPLOAD: %s\nTHIRD PARTY MSISDN: %s\nTHIRD PARTY OPERATOR MMC/MNC: %s\n", user.msisdn, user.opbrandname, user.opmmc, user.caltype, user.dur, user.down, user.upload, user.thirdparmsisdn, user.thirdparmmc);*/
+}
    }
