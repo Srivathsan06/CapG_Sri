@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include<unistd.h>
+#include <unistd.h>
 
 #define MAX_LINE_LENGTH 1024
 
@@ -31,7 +31,7 @@ int main() {
     }
 	int n=0;
 
-    while (fgets(line, MAX_LINE_LENGTH, fp) != NULL) 
+    while (fgets(line,MAX_LINE_LENGTH,fp) != NULL) 
 	{
 		printf("\n%s\n",line);
 		n++;
