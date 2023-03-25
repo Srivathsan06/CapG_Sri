@@ -1,0 +1,128 @@
+==17416== Memcheck, a memory error detector
+==17416== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==17416== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==17416== Command: ./bin/project
+==17416== Parent PID: 15816
+==17416== 
+--17416-- 
+--17416-- Valgrind options:
+--17416--    -v
+--17416--    --tool=memcheck
+--17416--    --leak-check=full
+--17416--    --show-reachable=yes
+--17416--    --log-file=valclient
+--17416-- Contents of /proc/version:
+--17416--   Linux version 5.4.0-1089-azure (buildd@lcy02-amd64-011) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #94~18.04.1-Ubuntu SMP Fri Aug 5 12:34:50 UTC 2022
+--17416-- 
+--17416-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--17416-- Page sizes: currently 4096, max supported 4096
+--17416-- Valgrind library directory: /usr/lib/valgrind
+--17416-- Reading syms from /home2/trainee37/personal_directory/CapG_Sri/project/bin/project
+--17416-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--17416--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--17416--   .. CRC mismatch (computed 385b96e8 wanted 9d917e0b)
+--17416--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--17416--   .. CRC is valid
+--17416-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--17416--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--17416--   .. CRC mismatch (computed 41ddb025 wanted 9972f546)
+--17416--    object doesn't have a symbol table
+--17416--    object doesn't have a dynamic symbol table
+--17416-- Scheduler: using generic scheduler lock implementation.
+--17416-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==17416== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-17416-by-trainee37-on-???
+==17416== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-17416-by-trainee37-on-???
+==17416== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-17416-by-trainee37-on-???
+==17416== 
+==17416== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==17416== don't want to do, unless you know exactly what you're doing,
+==17416== or are doing some strange experiment):
+==17416==   /usr/lib/valgrind/../../bin/vgdb --pid=17416 ...command...
+==17416== 
+==17416== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==17416==   /path/to/gdb ./bin/project
+==17416== and then give GDB the following command
+==17416==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=17416
+==17416== --pid is optional if only one valgrind process is running
+==17416== 
+--17416-- REDIR: 0x4020d20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580608c1 (???)
+--17416-- REDIR: 0x4020b00 (ld-linux-x86-64.so.2:index) redirected to 0x580608db (???)
+--17416-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--17416--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--17416--   .. CRC mismatch (computed 50df1b30 wanted 4800a4cf)
+--17416--    object doesn't have a symbol table
+--17416-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--17416--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--17416--   .. CRC mismatch (computed f893b962 wanted 95ee359e)
+--17416--    object doesn't have a symbol table
+==17416== WARNING: new redirection conflicts with existing -- ignoring it
+--17416--     old: 0x04020d20 (strlen              ) R-> (0000.0) 0x580608c1 ???
+--17416--     new: 0x04020d20 (strlen              ) R-> (2007.0) 0x04c34db0 strlen
+--17416-- REDIR: 0x401d540 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c35ee0 (strcmp)
+--17416-- REDIR: 0x4021260 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c394f0 (mempcpy)
+--17416-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--17416--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--17416--   .. CRC mismatch (computed 8c0be908 wanted 7c906570)
+--17416--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--17416--   .. CRC is valid
+--17416-- REDIR: 0x4edca50 (libc.so.6:memmove) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edbd60 (libc.so.6:strncpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcd30 (libc.so.6:strcasecmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edb7b0 (libc.so.6:strcat) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edbd90 (libc.so.6:rindex) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4ede480 (libc.so.6:rawmemchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcbc0 (libc.so.6:mempcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edc9f0 (libc.so.6:bcmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edbd20 (libc.so.6:strncmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edb820 (libc.so.6:strcmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcb20 (libc.so.6:memset) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4ef9db0 (libc.so.6:wcschr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edbcc0 (libc.so.6:strnlen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edb890 (libc.so.6:strcspn) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcd80 (libc.so.6:strncasecmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edb860 (libc.so.6:strcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcec0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edbdc0 (libc.so.6:strpbrk) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edb7e0 (libc.so.6:index) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edbc90 (libc.so.6:strlen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4ee6380 (libc.so.6:memrchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcdd0 (libc.so.6:strcasecmp_l) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edc9c0 (libc.so.6:memchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4efab70 (libc.so.6:wcslen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edc070 (libc.so.6:strspn) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edcd00 (libc.so.6:stpncpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edccd0 (libc.so.6:stpcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4ede4b0 (libc.so.6:strchrnul) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4edce20 (libc.so.6:strncasecmp_l) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--17416-- REDIR: 0x4fcc280 (libc.so.6:__strrchr_avx2) redirected to 0x4c34730 (rindex)
+--17416-- REDIR: 0x4ed5020 (libc.so.6:malloc) redirected to 0x4c31aa0 (malloc)
+--17416-- REDIR: 0x4edc5a0 (libc.so.6:__GI_strstr) redirected to 0x4c39760 (__strstr_sse2)
+--17416-- REDIR: 0x4fc82e0 (libc.so.6:__memchr_avx2) redirected to 0x4c35f80 (memchr)
+--17416-- REDIR: 0x4fcc990 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c386e0 (memmove)
+--17416-- REDIR: 0x4fcbe60 (libc.so.6:__strchr_avx2) redirected to 0x4c34950 (index)
+--17416-- REDIR: 0x4ed6c50 (libc.so.6:realloc) redirected to 0x4c33cb0 (realloc)
+--17416-- REDIR: 0x4ef4200 (libc.so.6:__strcpy_sse2_unaligned) redirected to 0x4c34dd0 (strcpy)
+==17416== Conditional jump or move depends on uninitialised value(s)
+==17416==    at 0x4C34E08: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==17416==    by 0x108ED1: main (sample1.c:43)
+==17416== 
+--17416-- REDIR: 0x4fcc090 (libc.so.6:__strchrnul_avx2) redirected to 0x4c39020 (strchrnul)
+--17416-- REDIR: 0x4fcc450 (libc.so.6:__strlen_avx2) redirected to 0x4c34cf0 (strlen)
+--17416-- REDIR: 0x4fcc970 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4c39130 (mempcpy)
+--17416-- REDIR: 0x4ed5910 (libc.so.6:free) redirected to 0x4c32cd0 (free)
+==17416== 
+==17416== HEAP SUMMARY:
+==17416==     in use at exit: 0 bytes in 0 blocks
+==17416==   total heap usage: 100,004 allocs, 100,004 frees, 820,008,206,696 bytes allocated
+==17416== 
+==17416== All heap blocks were freed -- no leaks are possible
+==17416== 
+==17416== Use --track-origins=yes to see where uninitialised values come from
+==17416== ERROR SUMMARY: 100000 errors from 1 contexts (suppressed: 0 from 0)
+==17416== 
+==17416== 100000 errors in context 1 of 1:
+==17416== Conditional jump or move depends on uninitialised value(s)
+==17416==    at 0x4C34E08: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==17416==    by 0x108ED1: main (sample1.c:43)
+==17416== 
+==17416== ERROR SUMMARY: 100000 errors from 1 contexts (suppressed: 0 from 0)
