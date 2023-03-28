@@ -21,4 +21,7 @@ struct User
     char thirdparmmc[10];
 };
 
+struct User * dataProcess(FILE *);
+void datadisplay(struct User *);
+
 #endif
