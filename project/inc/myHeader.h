@@ -21,7 +21,14 @@ struct User
     char thirdparmmc[10];
 };
 
-struct User * dataProcess(FILE *);
+struct User * dataProcess();
+int processFunc();
 void datadisplay(struct User *);
+void signUp();
+void logIn();
+void billingFunc(struct User *);
+void userDataDisplay(struct User *);
+void operatorDataDisplay(struct User *);
+int usPassCheck(char [],char []);
 
 #endif
